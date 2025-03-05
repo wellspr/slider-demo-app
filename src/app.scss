@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
+    color: #111;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    font-size: 2.3rem;
+    margin: 2rem 0;
+}
+
+.npm-install {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #eee;
+    padding: 1rem;
+    gap: 1rem;
+    position: relative;
+
+    code {
+        color: inherit;
+        font-family: monospace;
+        font-size: 1.4rem;
+        padding: 0.5rem;
+    }
+
+    &__copy-button {
+        border: none;
+        background-color: transparent;
+
+        svg {
+            color: #eee;
+            cursor: pointer;
+
+            &:hover {
+                color: #aaa;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    @keyframes opacity-up {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    &__tooltip {
+        animation: opacity-up 0.3s ease-in-out;
+
+        position: absolute;
+        min-width: 18rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+
+        background-color: #11aa33;
+        color: #fff;
+        font-weight: bold;
+        padding: 1rem;
+        left: calc(50% - 9rem);
+        bottom: -100%;
+
+        svg {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+    }
+}
+
+.slider-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.slider {
+    width: auto;
+    height: fit-content;
+    padding: 1rem 0;
+    background-color: #f0f0f0;
+}
+
+.slide {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 80%;
+        height: 80%;
+
+        object-fit: contain;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem 0;
+    margin: 2rem 0;
+
+    &__copy {
+        font-size: 1.2rem;
+        order: 1;
+    }
+
+    &__links {
+        order: 0;
+        &__github-link {
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-size: 1.6rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+
+                padding: 1rem 2rem;
+                border: 0.1rem solid;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: #333;
+                    color: #fff;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
